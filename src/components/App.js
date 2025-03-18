@@ -2,18 +2,24 @@ import React from "react";
 import Tooltip from "./Tooltip";
 import "../styles/App.css";
 
-const App = () => {
+function App() {
   return (
-    <div className="app" style={{marginTop: "100px"}}>
-
-        <Tooltip text={<h2><div>This is a tooltip</div></h2>}>
-          <h1 className="hover-item">Hover over me</h1>
-        </Tooltip>
-        <Tooltip text={<p><div>This is another tooltip</div></p>}>
-          <p className="hover-item">Hover over me to see another tooltip</p>
-        </Tooltip>
+    <div className="App">
+      <Tooltip text="This is a tooltip">
+        <h2 className="tooltip">
+          <div>
+            <div>This is a tooltip</div>
+          </div>
+        </h2>
+      </Tooltip>
+      <hr />
+      <Tooltip text="This is another tooltip">
+        <p className="tooltip">
+          <div>This is another tooltip</div>
+        </p>
+      </Tooltip>
     </div>
   );
-};
+}
 
 export default App;
